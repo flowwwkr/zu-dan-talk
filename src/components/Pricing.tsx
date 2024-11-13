@@ -132,6 +132,7 @@ const Pricing = () => {
           </Flex>
           <Flex
             position="relative"
+            width="w-50%"
             padding="p-3"
             direction="flex-col"
             gap="gap-6"

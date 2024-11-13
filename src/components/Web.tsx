@@ -229,26 +229,30 @@ const Web = () => (
             단방향 단체 채팅방
             <br />& 1:1 문의 채팅방
           </Text>
-          <Text
-            size="body-2xl"
-            color="c-gs-pure-white"
-            line="line-clamp-none"
-            desktop={{ size: 'dt:body-l' }}
-            tablet={{
-              position: 'tb:relative',
-              zIndex: 'tb:z-3',
-              align: 'tb:text-center',
-              size: 'tb:body-m',
-            }}
-            htmlAttributes={{
-              style: {
-                textWrap: 'balance',
-              },
-            }}
-          >
-            투자 정보 공유만을 위한 단방향 단체 채팅방과, 가입 문의를 위한 1:1
-            채팅방으로 차원이 다른 운영 경험을 제공합니다.
-          </Text>
+          <Wrapper width="w-full" maxWidth="xw-[47rem]">
+            <Text
+              size="body-2xl"
+              color="c-gs-pure-white"
+              line="line-clamp-none"
+              desktop={{ size: 'dt:body-l' }}
+              tablet={{
+                position: 'tb:relative',
+                zIndex: 'tb:z-3',
+                align: 'tb:text-center',
+                size: 'tb:body-m',
+              }}
+              htmlAttributes={{
+                style: {
+                  textWrap: 'balance',
+                },
+              }}
+              marginRight="mr-auto"
+            >
+              투자 정보 공유만을 위한 단방향 단체 채팅방과, 가입 문의를 위한 1:1
+              채팅방으로 차원이 다른 운영 경험을 제공합니다.
+            </Text>
+          </Wrapper>
+
           <Wrapper
             position="absolute"
             top="t-50%"
