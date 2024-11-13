@@ -10,6 +10,10 @@ const nextConfig = {
         },
       ],
     });
+    config.module.rules.push({
+      test: /\.json$/,
+      type: 'json', // Webpack 4+에서는 이 옵션이 더 적절함
+    });
     return config;
   },
 };
