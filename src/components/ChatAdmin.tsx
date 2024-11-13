@@ -33,6 +33,11 @@ const ChatAdmin = () => {
       alignItems="ai-start"
       alignContent="ac-start"
       gap="gap-3"
+      desktop={{
+        alignItems: 'dt:ai-center',
+        alignContent: 'dt:ac-center',
+        gap: 'dt:gap-2',
+      }}
     >
       <Flex gap="gap-1">
         <Button
@@ -48,12 +53,20 @@ const ChatAdmin = () => {
           }}
           onClick={() => setCurrentTab('one')}
           disabled={currentTab === 'one'}
+          desktop={{
+            gap: 'dt:gap-0.5',
+            paddingY: 'dt:py-0.5',
+            paddingLeft: 'dt:pl-0.5',
+            paddingRight: 'dt:pr-1',
+          }}
         >
           <Icon
             color="c-tertiary"
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgOneInCircle></SvgOneInCircle>
           </Icon>
@@ -63,6 +76,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:body-l' }}
+            mobile={{ size: 'mb:body-m' }}
           >
             회원 관리 기능
           </Text>
@@ -71,6 +86,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgPeople></SvgPeople>
           </Icon>
@@ -88,12 +105,20 @@ const ChatAdmin = () => {
           }}
           onClick={() => setCurrentTab('two')}
           disabled={currentTab === 'two'}
+          desktop={{
+            gap: 'dt:gap-0.5',
+            paddingY: 'dt:py-0.5',
+            paddingLeft: 'dt:pl-0.5',
+            paddingRight: 'dt:pr-1',
+          }}
         >
           <Icon
             color="c-tertiary"
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgTwoInCircle></SvgTwoInCircle>
           </Icon>
@@ -103,6 +128,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:body-l' }}
+            mobile={{ size: 'mb:body-m' }}
           >
             관리자 기능
           </Text>
@@ -111,6 +138,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgAdmin></SvgAdmin>
           </Icon>
@@ -128,12 +157,20 @@ const ChatAdmin = () => {
           }}
           onClick={() => setCurrentTab('three')}
           disabled={currentTab === 'three'}
+          desktop={{
+            gap: 'dt:gap-0.5',
+            paddingY: 'dt:py-0.5',
+            paddingLeft: 'dt:pl-0.5',
+            paddingRight: 'dt:pr-1',
+          }}
         >
           <Icon
             color="c-tertiary"
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgThreeInCircle></SvgThreeInCircle>
           </Icon>
@@ -143,6 +180,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:body-l' }}
+            mobile={{ size: 'mb:body-m' }}
           >
             채팅방 관리 기능
           </Text>
@@ -151,6 +190,8 @@ const ChatAdmin = () => {
             groupDisabledStyle={{
               color: 'group-disabled:c-on-primary-container',
             }}
+            desktop={{ size: 'dt:sz-2.5' }}
+            mobile={{ size: 'mb:sz-2' }}
           >
             <SvgManage></SvgManage>
           </Icon>
@@ -183,10 +224,20 @@ const ChatAdmin = () => {
               alignItems="ai-start"
               alignContent="ac-start"
             >
-              <Text color="c-on-neutral" size="body-3xl">
+              <Text
+                color="c-on-neutral"
+                size="body-3xl"
+                desktop={{ size: 'dt:body-xl' }}
+                mobile={{ size: 'mb:body-l' }}
+              >
                 간편한 회원 관리!
               </Text>
-              <Text color="c-on-neutral" size="display-m">
+              <Text
+                color="c-on-neutral"
+                size="display-m"
+                desktop={{ size: 'dt:headline-l' }}
+                mobile={{ size: 'mb:headline-m' }}
+              >
                 회원 관리 기능
               </Text>
             </Flex>
@@ -196,6 +247,7 @@ const ChatAdmin = () => {
               gap="gap-3"
               alignItems="ai-start"
               alignContent="ac-start"
+              desktop={{ gap: 'dt:gap-2' }}
             >
               <Flex
                 width="w-full"
@@ -204,11 +256,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgOneInSquare></SvgOneInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -228,11 +291,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgTwoInSquare></SvgTwoInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -262,11 +336,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 color="c-primary-container"
                 justifyContent="jc-start"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgThreeInSquare></SvgThreeInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -308,10 +393,20 @@ const ChatAdmin = () => {
               alignItems="ai-start"
               alignContent="ac-start"
             >
-              <Text color="c-on-neutral" size="body-3xl">
+              <Text
+                color="c-on-neutral"
+                size="body-3xl"
+                desktop={{ size: 'dt:body-xl' }}
+                mobile={{ size: 'mb:body-l' }}
+              >
                 리딩방을 지휘하는 운영의 핵심
               </Text>
-              <Text color="c-on-neutral" size="display-m">
+              <Text
+                color="c-on-neutral"
+                size="display-m"
+                desktop={{ size: 'dt:headline-l' }}
+                mobile={{ size: 'mb:headline-m' }}
+              >
                 관리자 기능
               </Text>
             </Flex>
@@ -321,6 +416,7 @@ const ChatAdmin = () => {
               gap="gap-3"
               alignItems="ai-start"
               alignContent="ac-start"
+              desktop={{ gap: 'dt:gap-2' }}
             >
               <Flex
                 width="w-full"
@@ -329,11 +425,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgOneInSquare></SvgOneInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -353,11 +460,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgTwoInSquare></SvgTwoInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -377,11 +495,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 color="c-primary-container"
                 justifyContent="jc-start"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgThreeInSquare></SvgThreeInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   안정성을 위해{' '}
                   <Span
                     htmlAttributes={{
@@ -424,10 +553,20 @@ const ChatAdmin = () => {
               alignItems="ai-start"
               alignContent="ac-start"
             >
-              <Text color="c-on-neutral" size="body-3xl">
-                리딩방을 지휘하는 운영의 핵심
+              <Text
+                color="c-on-neutral"
+                size="body-3xl"
+                desktop={{ size: 'dt:body-xl' }}
+                mobile={{ size: 'mb:body-l' }}
+              >
+                회원과 관리자가 모두 편한 채팅방!
               </Text>
-              <Text color="c-on-neutral" size="display-m">
+              <Text
+                color="c-on-neutral"
+                size="display-m"
+                desktop={{ size: 'dt:headline-l' }}
+                mobile={{ size: 'mb:headline-m' }}
+              >
                 채팅방 관리 기능
               </Text>
             </Flex>
@@ -437,6 +576,7 @@ const ChatAdmin = () => {
               gap="gap-3"
               alignItems="ai-start"
               alignContent="ac-start"
+              desktop={{ gap: 'dt:gap-2' }}
             >
               <Flex
                 width="w-full"
@@ -445,11 +585,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgOneInSquare></SvgOneInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -479,11 +630,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 justifyContent="jc-start"
                 color="c-primary-container"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgTwoInSquare></SvgTwoInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   <Span
                     htmlAttributes={{
                       style: {
@@ -513,11 +675,22 @@ const ChatAdmin = () => {
                 borderRadius="rad-1.5"
                 color="c-primary-container"
                 justifyContent="jc-start"
+                mobile={{ padding: 'mb:p-1' }}
               >
-                <Icon>
+                <Icon
+                  size="sz-3"
+                  shrink="shrink-0"
+                  desktop={{ size: 'dt:sz-2.5' }}
+                  mobile={{ size: 'mb:sz-2' }}
+                >
                   <SvgThreeInSquare></SvgThreeInSquare>
                 </Icon>
-                <Text size="body-2xl" color="c-on-primary-container">
+                <Text
+                  size="body-2xl"
+                  color="c-on-primary-container"
+                  desktop={{ size: 'dt:body-l' }}
+                  mobile={{ size: 'mb:body-m' }}
+                >
                   중요한 내용은{' '}
                   <Span
                     htmlAttributes={{
@@ -562,6 +735,7 @@ const ChatAdmin = () => {
         width="w-[92.8rem]"
         zIndex="z-3"
         transformTranslateY="trly-6%"
+        desktop={{ width: 'dt:w-[55.2rem]' }}
       >
         <Image className="w-full" src={adminMockup} alt="admin-mockup"></Image>
       </Wrapper>
