@@ -33,6 +33,7 @@ const Chat = () => {
       htmlAttributes={{
         id: 'chat',
       }}
+      desktop={{ height: 'dt:h-[96rem]' }}
     >
       <Wrapper position="absolute" width="w-auto" height="h-full" zIndex="z-1">
         <Image
@@ -41,7 +42,13 @@ const Chat = () => {
           className="w-auto h-full obj-cover"
         ></Image>
       </Wrapper>
-      <Flex position="relative" width="w-full" height="h-full" zIndex="z-2">
+      <Flex
+        position="relative"
+        width="w-full"
+        height="h-full"
+        zIndex="z-2"
+        desktop={{ alignContent: 'dt:ac-start', paddingTop: 'dt:pt-3.5' }}
+      >
         <Flex
           position="relative"
           width="w-86%"
@@ -51,6 +58,11 @@ const Chat = () => {
           justifyContent="jc-start"
           alignItems="ai-start"
           alignContent="ac-end"
+          desktop={{
+            alignItems: 'dt:ai-center',
+            alignContent: 'dt:ac-center',
+            gap: 'dt:gap-2',
+          }}
         >
           <Flex gap="gap-1">
             <Button
@@ -66,12 +78,20 @@ const Chat = () => {
               }}
               disabled={currentTab === 'one'}
               onClick={() => setCurrentTab('one')}
+              desktop={{
+                gap: 'dt:gap-0.5',
+                paddingY: 'dt:py-0.5',
+                paddingLeft: 'dt:pl-0.5',
+                paddingRight: 'dt:pr-1',
+              }}
             >
               <Icon
                 color="c-on-secondary"
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:sz-2.5' }}
+                mobile={{ size: 'mb:sz-2' }}
               >
                 <SvgOneInCircle></SvgOneInCircle>
               </Icon>
@@ -81,6 +101,8 @@ const Chat = () => {
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:body-l' }}
+                mobile={{ size: 'mb:body-m' }}
               >
                 단방향 채팅방
               </Text>
@@ -89,6 +111,8 @@ const Chat = () => {
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:sz-2.5' }}
+                mobile={{ size: 'mb:sz-2' }}
               >
                 <SvgSend></SvgSend>
               </Icon>
@@ -106,12 +130,20 @@ const Chat = () => {
               }}
               disabled={currentTab === 'two'}
               onClick={() => setCurrentTab('two')}
+              desktop={{
+                gap: 'dt:gap-0.5',
+                paddingY: 'dt:py-0.5',
+                paddingLeft: 'dt:pl-0.5',
+                paddingRight: 'dt:pr-1',
+              }}
             >
               <Icon
                 color="c-on-secondary"
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:sz-2.5' }}
+                mobile={{ size: 'mb:sz-2' }}
               >
                 <SvgTwoInCircle></SvgTwoInCircle>
               </Icon>
@@ -121,6 +153,8 @@ const Chat = () => {
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:body-l' }}
+                mobile={{ size: 'mb:body-m' }}
               >
                 1:1 문의 채팅방
               </Text>
@@ -129,6 +163,8 @@ const Chat = () => {
                 groupDisabledStyle={{
                   color: 'group-disabled:c-gs-pure-white',
                 }}
+                desktop={{ size: 'dt:sz-2.5' }}
+                mobile={{ size: 'mb:sz-2' }}
               >
                 <SvgHeadphone></SvgHeadphone>
               </Icon>
@@ -152,6 +188,7 @@ const Chat = () => {
                 htmlAttributes={{
                   style: { boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 0.15)' },
                 }}
+                mobile={{ width: 'mb:w-90%', minWidth: 'mb:mw-[32.4rem]' }}
               >
                 <Flex
                   width="w-full"
@@ -160,10 +197,20 @@ const Chat = () => {
                   alignItems="ai-start"
                   alignContent="ac-start"
                 >
-                  <Text color="c-primary-container" size="body-3xl">
+                  <Text
+                    color="c-primary-container"
+                    size="body-3xl"
+                    desktop={{ size: 'dt:body-xl' }}
+                    mobile={{ size: 'mb:body-l' }}
+                  >
                     투자에 필요한 정보만 위한
                   </Text>
-                  <Text color="c-gs-pure-white" size="display-m">
+                  <Text
+                    color="c-gs-pure-white"
+                    size="display-m"
+                    desktop={{ size: 'dt:headline-l' }}
+                    mobile={{ size: 'mb:headline-m' }}
+                  >
                     단방향 채팅방
                   </Text>
                 </Flex>
@@ -173,6 +220,7 @@ const Chat = () => {
                   gap="gap-3"
                   alignItems="ai-start"
                   alignContent="ac-start"
+                  desktop={{ gap: 'dt:gap-2' }}
                 >
                   <Flex
                     width="w-full"
@@ -182,8 +230,14 @@ const Chat = () => {
                     justifyContent="jc-start"
                     color="c-on-tertiary-container"
                     wrap="flex-nowrap"
+                    mobile={{ padding: 'mb:p-1' }}
                   >
-                    <Icon size="sz-3" shrink="shrink-0">
+                    <Icon
+                      size="sz-3"
+                      shrink="shrink-0"
+                      desktop={{ size: 'dt:sz-2.5' }}
+                      mobile={{ size: 'mb:sz-2' }}
+                    >
                       <SvgOneInSquare></SvgOneInSquare>
                     </Icon>
                     <Text
@@ -191,6 +245,8 @@ const Chat = () => {
                       color="c-gs-pure-white"
                       line="line-clamp-none"
                       wordBreak="break-keep"
+                      desktop={{ size: 'dt:body-l' }}
+                      mobile={{ size: 'mb:body-m' }}
                     >
                       회원들이 필수적인 정보를 놓치지 않도록, 관리자가 주요 투자
                       정보를 공유하는 단방향 채팅방입니다.
@@ -204,8 +260,14 @@ const Chat = () => {
                     justifyContent="jc-start"
                     color="c-on-tertiary-container"
                     wrap="flex-nowrap"
+                    mobile={{ padding: 'mb:p-1' }}
                   >
-                    <Icon size="sz-3" shrink="shrink-0">
+                    <Icon
+                      size="sz-3"
+                      shrink="shrink-0"
+                      desktop={{ size: 'dt:sz-2.5' }}
+                      mobile={{ size: 'mb:sz-2' }}
+                    >
                       <SvgTwoInSquare></SvgTwoInSquare>
                     </Icon>
                     <Text
@@ -213,6 +275,8 @@ const Chat = () => {
                       color="c-gs-pure-white"
                       line="line-clamp-none"
                       wordBreak="break-keep"
+                      desktop={{ size: 'dt:body-l' }}
+                      mobile={{ size: 'mb:body-m' }}
                     >
                       회원들이 매수/매도 정보를 놓치지 않도록, 매수/매도
                       메시지의 색상을 구분해서 보낼 수 있습니다.
@@ -238,6 +302,7 @@ const Chat = () => {
                 htmlAttributes={{
                   style: { boxShadow: '0px 4px 8px 0px rgba(0, 0, 0, 0.15)' },
                 }}
+                mobile={{ width: 'mb:w-[32.4rem]' }}
               >
                 <Flex
                   width="w-full"
@@ -246,10 +311,20 @@ const Chat = () => {
                   alignItems="ai-start"
                   alignContent="ac-start"
                 >
-                  <Text color="c-primary-container" size="body-3xl">
+                  <Text
+                    color="c-primary-container"
+                    size="body-3xl"
+                    desktop={{ size: 'dt:body-xl' }}
+                    mobile={{ size: 'mb:body-l' }}
+                  >
                     기간 연장 문의를 위한
                   </Text>
-                  <Text color="c-gs-pure-white" size="display-m">
+                  <Text
+                    color="c-gs-pure-white"
+                    size="display-m"
+                    desktop={{ size: 'dt:headline-l' }}
+                    mobile={{ size: 'mb:headline-m' }}
+                  >
                     1:1 문의 채팅방
                   </Text>
                 </Flex>
@@ -269,7 +344,12 @@ const Chat = () => {
                     color="c-on-tertiary-container"
                     wrap="flex-nowrap"
                   >
-                    <Icon size="sz-3" shrink="shrink-0">
+                    <Icon
+                      size="sz-3"
+                      shrink="shrink-0"
+                      desktop={{ size: 'dt:sz-2.5' }}
+                      mobile={{ size: 'mb:sz-2' }}
+                    >
                       <SvgOneInSquare></SvgOneInSquare>
                     </Icon>
                     <Text
@@ -277,6 +357,8 @@ const Chat = () => {
                       color="c-gs-pure-white"
                       line="line-clamp-none"
                       wordBreak="break-keep"
+                      desktop={{ size: 'dt:body-l' }}
+                      mobile={{ size: 'mb:body-m' }}
                     >
                       가입 기간 연장을 위한 1:1 채팅방을 통해 회원들의 문의를
                       처리할 수 있습니다.
@@ -298,8 +380,20 @@ const Chat = () => {
                 block: 'end', // 뷰포트의 시작 부분에 위치하도록
               });
             }}
+            desktop={{
+              width: 'dt:w-22',
+              paddingX: 'dt:px-1.5',
+              paddingY: 'dt:py-0.5',
+            }}
+            mobile={{ width: 'mb:w-20' }}
           >
-            <Text font="font-primary" size="headline-xs" color="c-secondary">
+            <Text
+              font="font-primary"
+              size="headline-xs"
+              color="c-secondary"
+              desktop={{ size: 'dt:title-m' }}
+              mobile={{ size: 'mb:title-s' }}
+            >
               이용 문의하기
             </Text>
             <Icon size="sz-3" color="c-secondary">
@@ -317,6 +411,12 @@ const Chat = () => {
             }
             transition="trans-all"
             transitionDuration="dur-1000"
+            desktop={{
+              width: 'dt:w-[27.6rem]',
+              top: 'dt:t-[47.1rem]',
+              transformTranslateX: 'dt:-trlx-[150%]',
+              left: 'dt:l-50%',
+            }}
           >
             <Image
               className="w-full"
@@ -335,6 +435,12 @@ const Chat = () => {
             }
             transition="trans-all"
             transitionDuration="dur-1000"
+            desktop={{
+              width: 'dt:w-[27.6rem]',
+              top: 'dt:t-[47.1rem]',
+              left: 'dt:l-50%',
+              transformTranslateX: 'dt:-trlx-50%',
+            }}
           >
             <Image
               className="w-full"

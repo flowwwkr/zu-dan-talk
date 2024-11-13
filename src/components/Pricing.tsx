@@ -17,6 +17,7 @@ const Pricing = () => {
       width="w-full"
       height="h-[81rem]"
       direction="flex-col"
+      mobile={{ height: 'mb:h-[64rem]' }}
     >
       <Wrapper position="absolute" width="w-auto" height="h-full" zIndex="z-1">
         <Image
@@ -26,28 +27,74 @@ const Pricing = () => {
         ></Image>
       </Wrapper>
       <Flex position="relative" width="w-full" height="h-full" zIndex="z-2">
-        <Flex width="w-86%" justifyContent="jc-between">
-          <Flex direction="flex-col" gap="gap-6" alignItems="ai-start">
+        <Flex
+          width="w-86%"
+          justifyContent="jc-between"
+          desktop={{
+            direction: 'dt:flex-col',
+            gap: 'dt:gap-6',
+            justifyContent: 'dt:jc-center',
+          }}
+          mobile={{ gap: 'mb:gap-4' }}
+        >
+          <Flex
+            direction="flex-col"
+            gap="gap-6"
+            alignItems="ai-start"
+            desktop={{
+              gap: 'dt:gap-3',
+              alignItems: 'dt:ai-center',
+            }}
+            mobile={{ gap: 'mb:gap-2' }}
+          >
             <Flex
               width="w-full"
               direction="flex-col"
               gap="gap-2"
               alignItems="ai-start"
               alignContent="ac-start"
+              desktop={{
+                alignItems: 'dt:ai-center',
+                alignContent: 'dt:ac-center',
+              }}
             >
-              <Text size="display-m" color="c-gs-pure-white">
+              <Text
+                size="display-m"
+                color="c-gs-pure-white"
+                mobile={{ size: 'mb:headline-l' }}
+              >
                 잠깐!
               </Text>
               <Text
-                size="headline-l"
+                size="body-5xl"
                 color="c-gs-pure-white"
                 line="line-clamp-none"
+                desktop={{
+                  size: 'dt:body-4xl',
+                  align: 'dt:text-center',
+                }}
+                mobile={{ size: 'mb:body-xl' }}
               >
                 자체 채팅앱 도입에{' '}
-                <Span color="c-orange-600">최소 수천만원</Span>에서
+                <Span
+                  color="c-orange-600"
+                  size="headline-l"
+                  desktop={{ size: 'dt:headline-m' }}
+                  mobile={{ size: 'mb:title-m' }}
+                >
+                  최소 수천만원
+                </Span>
+                에서
                 <br />
-                <Span color="c-orange-600">수억원의 개발 비용</Span>을 부담하실
-                것인가요?
+                <Span
+                  color="c-orange-600"
+                  size="headline-l"
+                  desktop={{ size: 'dt:headline-m' }}
+                  mobile={{ size: 'mb:title-m' }}
+                >
+                  수억원의 개발 비용
+                </Span>
+                을 부담하실 것인가요?
               </Text>
             </Flex>
             <Text
@@ -57,15 +104,27 @@ const Pricing = () => {
               fromOpacity="fo-1"
               toColor="tc-primary"
               toOpacity="to-1"
-              htmlAttributes={{
-                style: { fontSize: '8.4rem', fontWeight: '700' },
+              size="display-3xl"
+              desktop={{
+                size: 'dt:display-xl',
               }}
+              mobile={{ size: 'mb:display-m' }}
             >
               월 30만원
             </Text>
-            <Text size="body-5xl" color="c-gs-pure-white">
+            <Text
+              size="body-5xl"
+              color="c-gs-pure-white"
+              desktop={{ size: 'dt:body-4xl' }}
+              mobile={{ size: 'mb:body-xl' }}
+            >
               자체 채팅앱 도입,{' '}
-              <Span color="c-primary" size="headline-l">
+              <Span
+                color="c-primary"
+                size="headline-l"
+                desktop={{ size: 'dt:headline-m' }}
+                mobile={{ size: 'mb:title-m' }}
+              >
                 한 달 30만원
               </Span>
               이면 충분합니다.
@@ -80,12 +139,22 @@ const Pricing = () => {
             htmlAttributes={{
               style: { boxShadow: '0px 24px 48px 0px rgba(0, 0, 0, 0.25)' },
             }}
+            desktop={{
+              gap: 'dt:gap-4',
+              maxWidth: 'dt:xw-[36rem]',
+            }}
+            mobile={{ width: 'mb:w-full', maxWidth: 'mb:xw-[32.4rem]' }}
           >
             <Flex position="relative" gap="gap-2" zIndex="z-2">
-              <Icon size="sz-3.5">
+              <Icon size="sz-3.5" desktop={{ size: 'dt:sz-2.75' }}>
                 <SvgCelebration></SvgCelebration>
               </Icon>
-              <Text size="headline-s" color="c-primary">
+              <Text
+                size="headline-s"
+                color="c-primary"
+                desktop={{ size: 'dt:title-m' }}
+                mobile={{ size: 'mb:title-s' }}
+              >
                 이 모든 것을 단, <Span color="c-gs-pure-white">5일 만에 </Span>
                 도입해보세요.
               </Text>
@@ -98,6 +167,9 @@ const Pricing = () => {
               zIndex="z-2"
               alignItems="ai-start"
               alignContent="ac-start"
+              desktop={{
+                gap: 'dt:gap-3',
+              }}
             >
               <Flex
                 width="w-full"
@@ -105,11 +177,24 @@ const Pricing = () => {
                 gap="gap-1"
                 alignContent="ac-start"
                 alignItems="ai-start"
+                desktop={{
+                  gap: 'dt:gap-0.5',
+                  alignContent: 'dt:ac-center',
+                  alignItems: 'dt:ai-center',
+                }}
               >
-                <Text size="headline-s" color="c-gs-pure-white">
+                <Text
+                  size="headline-s"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:title-m' }}
+                >
                   우리 리딩방만의 커스텀 채팅앱
                 </Text>
-                <Text size="title-m" color="c-gs-pure-white">
+                <Text
+                  size="body-xl"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:body-m' }}
+                >
                   자체 앱처럼 로고와 색상을 커스텀할 수 있습니다.
                 </Text>
               </Flex>
@@ -119,11 +204,24 @@ const Pricing = () => {
                 gap="gap-1"
                 alignContent="ac-start"
                 alignItems="ai-start"
+                desktop={{
+                  gap: 'dt:gap-0.5',
+                  alignContent: 'dt:ac-center',
+                  alignItems: 'dt:ai-center',
+                }}
               >
-                <Text size="headline-s" color="c-gs-pure-white">
+                <Text
+                  size="headline-s"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:title-m' }}
+                >
                   크로스플랫폼 메신저 APP 제공
                 </Text>
-                <Text size="title-m" color="c-gs-pure-white">
+                <Text
+                  size="body-xl"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:body-m' }}
+                >
                   안드로이드/아이폰 모든 회원이 이용 가능합니다.
                 </Text>
               </Flex>
@@ -133,11 +231,24 @@ const Pricing = () => {
                 gap="gap-1"
                 alignContent="ac-start"
                 alignItems="ai-start"
+                desktop={{
+                  gap: 'dt:gap-0.5',
+                  alignContent: 'dt:ac-center',
+                  alignItems: 'dt:ai-center',
+                }}
               >
-                <Text size="headline-s" color="c-gs-pure-white">
+                <Text
+                  size="headline-s"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:title-m' }}
+                >
                   관리자 WEB 제공
                 </Text>
-                <Text size="title-m" color="c-gs-pure-white">
+                <Text
+                  size="body-xl"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:body-m' }}
+                >
                   사용자 / 채팅방 관리용 웹페이지를 제공합니다.
                 </Text>
               </Flex>
@@ -147,11 +258,24 @@ const Pricing = () => {
                 gap="gap-1"
                 alignContent="ac-start"
                 alignItems="ai-start"
+                desktop={{
+                  gap: 'dt:gap-0.5',
+                  alignContent: 'dt:ac-center',
+                  alignItems: 'dt:ai-center',
+                }}
               >
-                <Text size="headline-s" color="c-gs-pure-white">
+                <Text
+                  size="headline-s"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:title-m' }}
+                >
                   메신저 셋팅을 위한 기술지원
                 </Text>
-                <Text size="title-m" color="c-gs-pure-white">
+                <Text
+                  size="body-xl"
+                  color="c-gs-pure-white"
+                  desktop={{ size: 'dt:body-m' }}
+                >
                   나머지는 기술지원팀이 모두 진행합니다.
                 </Text>
               </Flex>

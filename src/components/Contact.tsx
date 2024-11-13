@@ -27,6 +27,7 @@ const Contact = () => {
       htmlAttributes={{
         id: 'contact',
       }}
+      mobile={{ height: 'mb:h-[64rem]' }}
     >
       <Wrapper position="absolute" width="w-auto" height="h-full" zIndex="z-1">
         <Image
@@ -36,9 +37,25 @@ const Contact = () => {
         ></Image>
       </Wrapper>
       <Flex position="relative" width="w-full" height="h-full" zIndex="z-2">
-        <Flex width="w-86%" direction="flex-col" gap="gap-5">
-          <Flex width="w-full" direction="flex-col" gap="gap-3">
-            <Text color="c-gs-pure-white" size="body-xl">
+        <Flex
+          width="w-86%"
+          direction="flex-col"
+          gap="gap-5"
+          mobile={{ gap: 'mb:gap-3' }}
+        >
+          <Flex
+            width="w-full"
+            direction="flex-col"
+            gap="gap-3"
+            mobile={{ gap: 'mb:gap-2' }}
+            smallMobile={{ gap: 'sb:gap-1' }}
+          >
+            <Text
+              color="c-gs-pure-white"
+              size="body-3xl"
+              mobile={{ size: 'mb:body-xl' }}
+              smallMobile={{ size: 'sb:body-l' }}
+            >
               리딩방 전용 임대형 단방향 채팅앱,{' '}
               <Span
                 font="font-secondary"
@@ -54,12 +71,17 @@ const Contact = () => {
                 &ldquo;주단톡&rdquo;
               </Span>
             </Text>
-            <Text color="c-gs-pure-white" size="display-m">
+            <Text
+              color="c-gs-pure-white"
+              size="display-xl"
+              mobile={{ size: 'mb:display-m' }}
+              smallMobile={{ size: 'sb:headline-l' }}
+            >
               지금 바로 문의하세요!
             </Text>
           </Flex>
           <form
-            className="w-[55.2rem]"
+            className="w-[55.2rem] mb:w-full"
             action={async (formData: FormData) => {
               if (!isCheck) {
                 alert('약관에 동의해주세요.');
@@ -74,8 +96,18 @@ const Contact = () => {
               }
             }}
           >
-            <Flex width="w-full" direction="flex-col" gap="gap-5">
-              <Flex width="w-full" direction="flex-col" gap="gap-2">
+            <Flex
+              width="w-full"
+              direction="flex-col"
+              gap="gap-5"
+              mobile={{ gap: 'mb:gap-3' }}
+            >
+              <Flex
+                width="w-full"
+                direction="flex-col"
+                gap="gap-2"
+                mobile={{ gap: 'mb:gap-1' }}
+              >
                 <Flex
                   width="w-full"
                   direction="flex-col"
@@ -84,7 +116,16 @@ const Contact = () => {
                   alignContent="ac-start"
                 >
                   <Label htmlFor="name">
-                    <Text size="body-2xl" color="c-gs-pure-white">
+                    <Text
+                      size="body-2xl"
+                      color="c-gs-pure-white"
+                      mobile={{
+                        size: 'mb:body-l',
+                      }}
+                      smallMobile={{
+                        size: 'sb:body-m',
+                      }}
+                    >
                       이름
                     </Text>
                   </Label>
@@ -94,6 +135,10 @@ const Contact = () => {
                     paddingX="px-2"
                     paddingY="py-1"
                     borderRadius="rad-1"
+                    mobile={{
+                      paddingX: 'mb:px-1.5',
+                      paddingY: 'mb:py-0.5',
+                    }}
                   >
                     <Input
                       id="name"
@@ -107,6 +152,12 @@ const Contact = () => {
                       }}
                       placeholder={'이름을 입력하세요'}
                       required
+                      mobile={{
+                        fontSize: 'mb:body-l',
+                      }}
+                      smallMobile={{
+                        fontSize: 'sb:body-m',
+                      }}
                     ></Input>
                   </Wrapper>
                 </Flex>
@@ -118,7 +169,16 @@ const Contact = () => {
                   alignContent="ac-start"
                 >
                   <Label htmlFor="phone">
-                    <Text size="body-2xl" color="c-gs-pure-white">
+                    <Text
+                      size="body-2xl"
+                      color="c-gs-pure-white"
+                      mobile={{
+                        size: 'mb:body-l',
+                      }}
+                      smallMobile={{
+                        size: 'sb:body-m',
+                      }}
+                    >
                       전화번호
                     </Text>
                   </Label>
@@ -128,6 +188,10 @@ const Contact = () => {
                     paddingX="px-2"
                     paddingY="py-1"
                     borderRadius="rad-1"
+                    mobile={{
+                      paddingX: 'mb:px-1.5',
+                      paddingY: 'mb:py-0.5',
+                    }}
                   >
                     <Input
                       id="phone"
@@ -141,6 +205,12 @@ const Contact = () => {
                       }}
                       placeholder={'11자리 전화번호를 입력하세요.'}
                       required
+                      mobile={{
+                        fontSize: 'mb:body-l',
+                      }}
+                      smallMobile={{
+                        fontSize: 'sb:body-m',
+                      }}
                     ></Input>
                   </Wrapper>
                 </Flex>
@@ -153,7 +223,12 @@ const Contact = () => {
                     onChange={() => setIsCheck((prev) => !prev)}
                   ></CheckBox>
                   <Label htmlFor="agree">
-                    <Text size="body-m" color="c-gs-pure-white">
+                    <Text
+                      size="body-m"
+                      color="c-gs-pure-white"
+                      mobile={{ size: 'mb:body-s' }}
+                      smallMobile={{ size: 'sb:label-s' }}
+                    >
                       개인정보 수집 및 이용에 동의합니다.
                     </Text>
                   </Label>
@@ -164,8 +239,19 @@ const Contact = () => {
                 paddingX="px-2.5"
                 paddingY="py-1"
                 color="c-gs-pure-white"
+                mobile={{
+                  width: 'mb:w-22',
+                  paddingX: 'mb:px-1.5',
+                  paddingY: 'mb:py-0.5',
+                }}
+                smallMobile={{ width: 'sb:w-20' }}
               >
-                <Text size="title-l" color="c-on-secondary-container">
+                <Text
+                  size="title-l"
+                  color="c-on-secondary-container"
+                  mobile={{ size: 'mb:title-m' }}
+                  smallMobile={{ size: 'sb:title-s' }}
+                >
                   문의 신청하기
                 </Text>
               </Button>
