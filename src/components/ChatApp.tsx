@@ -1,4 +1,4 @@
-import { Flex, Span, Text, Wrapper } from '@flowwwkr/design-system-tailwind';
+import { Flex, Text, Wrapper } from '@flowwwkr/design-system-tailwind';
 import background02 from '../assets/images/background-02@2x.png';
 import Image from 'next/image';
 import trustworthy from '../assets/images/trustworthy.png';
@@ -11,6 +11,9 @@ const ChatApp = () => (
     width="w-full"
     height="h-[81rem]"
     direction="flex-col"
+    desktop={{
+      height: 'dt:h-[60rem]',
+    }}
   >
     <Wrapper position="absolute" width="w-auto" height="h-full" zIndex="z-1">
       <Image
@@ -20,7 +23,17 @@ const ChatApp = () => (
       ></Image>
     </Wrapper>
     <Flex position="relative" width="w-full" height="h-full" zIndex="z-2">
-      <Flex position="relative" width="w-86%" height="h-full">
+      <Flex
+        position="relative"
+        width="w-86%"
+        height="h-full"
+        desktop={{
+          width: 'dt:w-96%',
+        }}
+        tablet={{
+          paddingY: 'tb:py-2',
+        }}
+      >
         <Flex
           width="w-full"
           direction="flex-col"
@@ -28,6 +41,15 @@ const ChatApp = () => (
           alignContent="ac-start"
           justifyContent="jc-start"
           gap="gap-[10rem]"
+          desktop={{
+            gap: 'dt:gap-8',
+          }}
+          tablet={{
+            alignContent: 'tb:ac-center',
+            alignItems: 'tb:ai-center',
+            height: 'tb:h-full',
+            justifyContent: 'tb:jc-between',
+          }}
         >
           <Flex
             width="w-full"
@@ -35,6 +57,13 @@ const ChatApp = () => (
             alignItems="ai-start"
             alignContent="ac-start"
             gap="gap-3.5"
+            desktop={{
+              gap: 'dt:gap-2',
+            }}
+            tablet={{
+              alignContent: 'tb:ac-center',
+              alignItems: 'tb:ai-center',
+            }}
           >
             <Wrapper
               position="relative"
@@ -48,6 +77,10 @@ const ChatApp = () => (
               borderToColor="b-to-c-gs-pure-white"
               borderToOpacity="b-to-o-1"
               color="c-on-primary-container"
+              desktop={{
+                paddingX: 'dt:px-1.5',
+                paddingY: 'dt:py-0.5',
+              }}
             >
               <Text
                 font="font-primary"
@@ -56,6 +89,15 @@ const ChatApp = () => (
                 fromColor="fc-primary"
                 toColor="tc-gs-pure-white"
                 toOpacity="to-1"
+                desktop={{
+                  size: 'dt:body-2xl',
+                }}
+                tablet={{
+                  size: 'tb:body-l',
+                }}
+                mobile={{
+                  size: 'mb:body-m',
+                }}
               >
                 리딩방의 핵심은 믿음과 신뢰
               </Text>
@@ -66,6 +108,12 @@ const ChatApp = () => (
                 size="display-xl"
                 color="c-gs-pure-white"
                 zIndex="z-2"
+                desktop={{
+                  size: 'dt:display-m',
+                }}
+                tablet={{
+                  size: 'tb:headline-l',
+                }}
               >
                 신뢰감을 주는 전용 채팅앱
               </Text>
@@ -77,7 +125,7 @@ const ChatApp = () => (
                 transformTranslate="-trl-50%"
               >
                 <Image
-                  className="w-full"
+                  className="w-full dt:w-72% tb:w-50%"
                   src={trustworthy}
                   alt="trustworthy"
                 ></Image>
@@ -87,6 +135,15 @@ const ChatApp = () => (
               size="body-2xl"
               color="c-gs-pure-white"
               line="line-clamp-none"
+              htmlAttributes={{
+                style: { fontWeight: 500 },
+              }}
+              desktop={{
+                size: 'dt:title-m',
+              }}
+              tablet={{
+                size: 'tb:body-m',
+              }}
             >
               회원들에게 손쉽게 투자 정보를 제공할 수 있고,
               <br />
@@ -104,11 +161,27 @@ const ChatApp = () => (
         bottom="b-0"
         right="r-0"
         width="w-[120rem]"
-        zIndex="z-3"
-        transformTranslateX="trlx-10%"
+        height="h-auto"
+        zIndex="z-1"
+        transformTranslateX="trlx-22%"
         transformTranslateY="trly-10%"
+        desktop={{
+          width: 'dt:w-[80rem]',
+          transformTranslateY: 'dt:trly-5%',
+        }}
+        tablet={{
+          width: 'tb:w-[40rem]',
+          bottom: 'tb:b-50%',
+          left: 'tb:l-50%',
+          transformTranslateX: 'tb:-trlx-50%',
+          transformTranslateY: 'tb:trly-50%',
+        }}
       >
-        <Image className="w-full" src={phoneMockup} alt="phone-mockup"></Image>
+        <Image
+          className="w-full h-auto"
+          src={phoneMockup}
+          alt="phone-mockup"
+        ></Image>
       </Wrapper>
     </Flex>
   </Flex>

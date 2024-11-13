@@ -1,4 +1,4 @@
-import { Button, Flex, Icon, Text } from '@flowwwkr/design-system-tailwind';
+import { Flex, Text } from '@flowwwkr/design-system-tailwind';
 import HeaderNav from '@/components/HeaderNav';
 
 const Header = () => {
@@ -14,8 +14,22 @@ const Header = () => {
         color="c-gs-pure-black"
         colorOpacity="co-0.4"
         alignItems="ai-center"
+        wrap="flex-nowrap"
+        desktop={{ paddingX: 'dt:px-3.5', paddingY: 'dt:py-2.75' }}
+        tablet={{
+          paddingX: 'tb:px-2.25',
+          paddingY: 'tb:py-1.25',
+          height: 'tb:h-6',
+        }}
       >
-        <Text font="font-secondary" color="c-gs-pure-white" size="headline-m">
+        <Text
+          font="font-secondary"
+          color="c-gs-pure-white"
+          size="headline-m"
+          desktop={{
+            size: 'dt:headline-s',
+          }}
+        >
           주단톡
         </Text>
         <Flex gap="gap-3">

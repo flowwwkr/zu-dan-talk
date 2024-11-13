@@ -8,6 +8,7 @@ const HeaderNav = () => {
     <>
       <Button
         paddingX="px-2.5"
+        paddingY="py-1"
         color="c-transparent"
         justifyContent="jc-center"
         alignItems="ai-center"
@@ -18,8 +19,22 @@ const HeaderNav = () => {
             behavior: 'smooth', // 부드러운 스크롤
           });
         }}
+        desktop={{
+          paddingX: 'dt:px-1.5',
+          paddingY: 'dt:py-0.5',
+        }}
+        tablet={{
+          display: 'tb:hidden',
+        }}
       >
-        <Text font="font-primary" size="headline-xs" color="c-gs-pure-white">
+        <Text
+          font="font-primary"
+          size="headline-xs"
+          color="c-gs-pure-white"
+          desktop={{
+            size: 'dt:title-m',
+          }}
+        >
           &ldquo;주단톡&rdquo;이란?
         </Text>
       </Button>
@@ -35,8 +50,22 @@ const HeaderNav = () => {
             block: 'start', // 뷰포트의 시작 부분에 위치하도록
           });
         }}
+        desktop={{
+          paddingX: 'dt:px-1.5',
+          paddingY: 'dt:py-0.5',
+        }}
+        tablet={{
+          display: 'tb:hidden',
+        }}
       >
-        <Text font="font-primary" size="headline-xs" color="c-gs-pure-white">
+        <Text
+          font="font-primary"
+          size="headline-xs"
+          color="c-gs-pure-white"
+          desktop={{
+            size: 'dt:title-m',
+          }}
+        >
           관리자 웹 기능
         </Text>
       </Button>
@@ -52,8 +81,22 @@ const HeaderNav = () => {
             block: 'center', // 뷰포트의 시작 부분에 위치하도록
           });
         }}
+        desktop={{
+          paddingX: 'dt:px-1.5',
+          paddingY: 'dt:py-0.5',
+        }}
+        tablet={{
+          display: 'tb:hidden',
+        }}
       >
-        <Text font="font-primary" size="headline-xs" color="c-gs-pure-white">
+        <Text
+          font="font-primary"
+          size="headline-xs"
+          color="c-gs-pure-white"
+          desktop={{
+            size: 'dt:title-m',
+          }}
+        >
           채팅방 앱 기능
         </Text>
       </Button>
@@ -69,11 +112,28 @@ const HeaderNav = () => {
             block: 'end', // 뷰포트의 시작 부분에 위치하도록
           });
         }}
+        desktop={{
+          paddingX: 'dt:px-1.5',
+          paddingY: 'dt:py-0.5',
+        }}
       >
-        <Text font="font-primary" size="headline-xs" color="c-secondary">
+        <Text
+          font="font-primary"
+          size="headline-xs"
+          color="c-secondary"
+          desktop={{
+            size: 'dt:title-m',
+          }}
+        >
           이용 문의하기
         </Text>
-        <Icon size="sz-3" color="c-secondary">
+        <Icon
+          size="sz-3"
+          color="c-secondary"
+          desktop={{
+            size: 'dt:sz-2.25',
+          }}
+        >
           <SvgForwardArrow />
         </Icon>
       </Button>
