@@ -47,7 +47,7 @@ const Chat = () => {
         width="w-full"
         height="h-full"
         zIndex="z-2"
-        desktop={{ alignContent: 'dt:ac-start', paddingTop: 'dt:pt-3.5' }}
+        desktop={{ alignContent: 'dt:ac-start', paddingTop: 'dt:pt-6' }}
       >
         <Flex
           position="relative"
