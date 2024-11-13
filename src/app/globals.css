@@ -1,27 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '../../node_modules/@flowwwkr/design-system-tailwind/styles/index.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --on-primary: 246 252 255;
+  --on-primary-container: 26 65 133;
+  --on-secondary: 126 154 204;
+  --on-secondary-container: 43 133 200;
+  --primary: 56 189 255;
+  --primary-container: 217 242 255;
+  --secondary: 24 0 181;
+  --secondary-container: 131 214 255;
+  --tertiary: 113 149 167;
+  --tertiary-container: 59, 136, 195;
+  --on-tertiary: 196 215 225;
+  --on-tertiary-container: 17 47 98;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --neutral-surface: 246 246 247;
+  --neutral-on-surface: 48 49 54;
+  --neutral-on-surface-variant: 99 102 112;
+  --neutral-outline: 120 123 138;
+  --neutral-outline-variant: 160 165 177;
+  --neutral-surface-container-01: 255 255 255;
+  --neutral-surface-container-02: 238 240 241;
+  --neutral-surface-container-03: 223 227 230;
+  --neutral-surface-container-04: 203 208 214;
+  --neutral-surface-container-05: 182 187 195;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  --states-error: 188 25 25;
+  --states-on-error: 255 255 255;
+  --states-error-container: 254 226 226;
+  --states-on-error-container: 70 9 9;
 }
