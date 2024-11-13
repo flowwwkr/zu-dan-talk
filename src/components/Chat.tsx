@@ -405,16 +405,17 @@ const Chat = () => {
             top="t-0"
             left="l-0"
             width="w-[45.6rem]"
-            opacity={currentTab === 'one' ? 'oc-0.2' : 'oc-1'}
+            opacity={currentTab === 'two' ? 'oc-0.2' : 'oc-1'}
             transformTranslateX={
-              currentTab === 'one' ? '-trlx-[105%]' : '-trlx-0'
+              currentTab === 'two' ? '-trlx-[105%]' : '-trlx-0'
             }
             transition="trans-all"
             transitionDuration="dur-1000"
             desktop={{
               width: 'dt:w-[27.6rem]',
               top: 'dt:t-[47.1rem]',
-              transformTranslateX: 'dt:-trlx-[150%]',
+              transformTranslateX:
+                currentTab === 'two' ? 'dt:-trlx-[150%]' : 'dt:-trlx-50%',
               left: 'dt:l-50%',
             }}
           >
@@ -429,9 +430,9 @@ const Chat = () => {
             top="t-0"
             left="l-0"
             width="w-[45.6rem]"
-            opacity={currentTab === 'two' ? 'oc-0.2' : 'oc-1'}
+            opacity={currentTab === 'one' ? 'oc-0.2' : 'oc-1'}
             transformTranslateX={
-              currentTab === 'two' ? '-trlx-[105%]' : '-trlx-0'
+              currentTab === 'one' ? '-trlx-[105%]' : '-trlx-0'
             }
             transition="trans-all"
             transitionDuration="dur-1000"
@@ -439,7 +440,8 @@ const Chat = () => {
               width: 'dt:w-[27.6rem]',
               top: 'dt:t-[47.1rem]',
               left: 'dt:l-50%',
-              transformTranslateX: 'dt:-trlx-50%',
+              transformTranslateX:
+                currentTab === 'one' ? 'dt:-trlx-[150%]' : 'dt:-trlx-50%',
             }}
           >
             <Image
