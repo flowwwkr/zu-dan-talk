@@ -619,6 +619,11 @@ const Hero = () => (
                 wordBreak: 'mb:break-keep',
                 align: 'mb:text-right',
               }}
+              htmlAttributes={{
+                style: {
+                  textWrap: 'balance',
+                },
+              }}
             >
               카카오톡이 막혀 갈 곳 없는 리딩방 사장님을 위한 리딩방 전용 단방향
               채팅 APP
