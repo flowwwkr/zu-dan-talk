@@ -385,7 +385,7 @@ const Chat = () => {
               paddingX: 'dt:px-1.5',
               paddingY: 'dt:py-0.5',
             }}
-            mobile={{ width: 'mb:w-20' }}
+            mobile={{ width: 'mb:w-18' }}
           >
             <Text
               font="font-primary"
@@ -396,7 +396,13 @@ const Chat = () => {
             >
               이용 문의하기
             </Text>
-            <Icon size="sz-3" color="c-secondary">
+            <Icon
+              size="sz-3"
+              color="c-secondary"
+              desktop={{
+                size: 'dt:sz-2.25',
+              }}
+            >
               <SvgForwardArrow />
             </Icon>
           </Button>
