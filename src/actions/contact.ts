@@ -28,8 +28,8 @@ export async function contact(formData: FormData): Promise<VerificationResult> {
   }
   try {
     const mailOptions = {
-      from: 'publicheo@naver.com',
-      to: 'cs@zudantalk.co.kr',
+      from: `${process.env.NAVER_SMTP_ID}@naver.com`,
+      to: `${process.env.SMTP_RECIPIENT_EMAIL}`,
       // to: 'carl@flowww.kr',
       subject: '[주단톡] 상담 신청하기',
       html: `
