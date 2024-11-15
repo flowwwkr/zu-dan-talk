@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+
+let prefixCounter = 0;
+
 const nextConfig = {
   webpack(config) {
     // SVG 파일을 로드할 때 @svgr/webpack을 사용하여 React 컴포넌트로 변환
@@ -34,6 +37,18 @@ const nextConfig = {
                           defaultAttrs: false,
                         },
                       },
+                    },
+                  },
+                  {
+                    name: 'prefixIds',
+                    params: {
+                      delim: '__',
+                      prefixIds: true,
+                      prefixClassNames: true,
+                      prefix: () =>
+                        `flowww_${
+                          Math.floor(Math.random() * 9999) + 1
+                        }_${prefixCounter++}`,
                     },
                   },
                 ],
